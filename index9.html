@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q9</title>
+</head>
+<body style="background-color: rgb(172, 170, 170);">
+    <p>write Words in triangle way</p><br>
+    <input type="text" id="txt" placeholder="enter a Word" style="background-color: lightgray;"><br><br>
+    <button type="button" onclick="js();" style="background-color: rgb(172, 170, 170);">Enter</button>
+    <button type="button" onclick="clo();" style="background-color: rgb(172, 170, 170);">Goback</button>
+    <p id="output"></p>
+    <script>
+function js()
+    { 
+        var num = document.getElementById("txt").value;  
+     var num1="";
+    for( var i=0; i<num.length; i++){
+        num1=num1+num[i];
+        document.write(num1+"<br>");
+    }
+
+    }
+    function clo(){
+        window.close("index9.html");    }
+    </script>
+</body>
+</html>

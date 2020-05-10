@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q2</title>
+</head>
+<body style="background-color: rgb(172, 170, 170);">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-2 col-md-6">
+                <div>
+                    
+                <table id="table">
+                       
+                     <label id="label1" > Enter 5 numbers </label><br>
+                     <input type="number" id="input1" placeholder="enter 1st number" style="background-color: rgb(172, 170, 170);"><br>
+                     <input type="number" id="input2" placeholder="enter 2nd number" style="background-color: rgb(172, 170, 170);"><br>
+                     <input type="number" id="input3" placeholder="enter 3rd number" style="background-color: rgb(172, 170, 170);" ><br>
+                     <input type="number" id="input4" placeholder="enter 4th number" style="background-color: rgb(172, 170, 170);"><br>
+                     <input type="number" id="input5" placeholder="enter 5th number" style="background-color: rgb(172, 170, 170);"><br><br>
+                     
+                     <div>
+                        <button type="button" onclick="frequency()" style="background-color: rgb(172, 170, 170);">Enter</button>
+                        <button type="submit" onclick="clo()" style="background-color: rgb(172, 170, 170);">goback</button>
+
+                    </div> 
+                     <div>
+                         <P id="out"></P>
+                         <p id="out1"></p>
+                     </div>
+                     
+                    </table>
+                </div> 
+            </div>
+        </div>
+    </div>
+    <script>
+        
+        var num= Array();
+        var fr=1;
+        var a=0;
+        var number=0;
+        function frequency(){
+           
+              num[0]= document.getElementById("input1").value;
+              num[1]=document.getElementById("input2").value;
+              num[2]= document.getElementById("input3").value;
+              num[3]=document.getElementById("input4").value;
+              num[4]=document.getElementById("input5").value;
+            
+            for(var i=0; i<num.length; i++)
+            {
+                for( var j=i; j<num.length; j++)
+                {
+                    if(num[i]==num[j])
+                    { ;
+                        a=a+1;
+                        if(fr<a){
+                            fr=a;
+                            number= num[i];
+                        }
+                    }
+                     
+                }
+                a=0;
+            }
+            document.getElementById("out").innerHTML="Array[ "+num[0]+"," +num[1]+","+num[2]+","+num[3]+","+num[4]+" ]";
+            document.getElementById("out1").innerHTML="Repeated Number is "+number+" the frequency is : "+fr;
+        }
+        function clo()
+        {
+            window.close("index2.html");
+        } 
+    </script>
+</body>
+</html>

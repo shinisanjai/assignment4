@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q6</title>
+</head>
+<body style="background-color: rgb(172, 170, 170);">
+    
+    <p>Trim up to 10 letter</p><br>
+    <input type="text" id="txt" placeholder="Type something ...." style="background-color: lightgray;"><br><br>
+    <button type="button" onclick="trim();" style="background-color: rgb(172, 170, 170);">submit</button>
+    <button type="button" onclick="clo();" style="background-color: rgb(172, 170, 170);">Goback</button>
+
+    <p id="out"></p>
+    <script>
+        
+        function trim(){
+            var txt1=document.getElementById("txt").value;
+
+        document.getElementById("out").innerHTML="Trim up to 10 letters ---> "+ txt1.substring(0,10);
+        }
+        function clo()
+        {
+            window.close("index6.html");
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q5</title>
+</head>
+<body style="background-color: rgb(172, 170, 170);">
+    <p> display enen & odd numbers up to 15</p> <br> <br>
+    <button type="button" onclick="loop()" style="background-color: rgb(172, 170, 170);">OK</button>
+    <button type="button" onclick="clo();" style="background-color: rgb(172, 170, 170)">Goback</button>
+
+    <p id="out"></p>
+    <script>
+        var a=0;
+function loop(){
+    for (i=0; i<=15; i++)
+    {
+        if(i%2==0){}
+        else{ }
+    }
+    document.write("EVEN NUMBERS UP TO 15 <br>");
+    document.write("===================== <br>");
+for(var i=0; i<=15; i=i+2)
+    {
+            document.write(i+"<br>");
+    }
+    document.write("<br> ODD NUMBERS UP TO 15 <br>")
+    document.write("==================== <br>");
+    for (var i=1; i<=15; i=i+2)
+    {
+             document.write(i+"<br>");
+    }
+}
+function clo()
+        {
+            window.close("index1.html");
+        }
+    </script>
+</body>
+</html>

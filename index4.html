@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q4</title>
+</head>
+<body style="background-color: rgb(172, 170, 170);">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-2 col-md-6">
+                <div>
+                    
+                <table id="table">
+                       
+                     <label id="label1" > Enter 5 numbers </label><br><br>
+                     <input type="number" id="input1" placeholder="enter 1st number" style="background-color: rgb(172, 170, 170);"><br>
+                     <input type="number" id="input2" placeholder="enter 2nd number" style="background-color: rgb(172, 170, 170);"><br>
+                     <input type="number" id="input3" placeholder="enter 3rd number" style="background-color: rgb(172, 170, 170);"><br>
+                     <input type="number" id="input4" placeholder="enter 4th number" style="background-color: rgb(172, 170, 170);"><br>
+                     <input type="number" id="input5" placeholder="enter 5th number" style="background-color: rgb(172, 170, 170);"><br><br>
+                     <div>
+                        <button type="button" onclick="get();" style="background-color: rgb(172, 170, 170);" >Enter</button>
+                        <button type="button" onclick="clo();" style="background-color: rgb(172, 170, 170);" >Goback</button>
+
+                    </div> 
+                     
+                     <div>
+                         <P id="out"></P>
+                         <p id="out1"></p>
+                         <p id="out2"></p>
+                     </div>
+                     
+                    </table>
+                </div> 
+            </div>
+        </div>
+    </div>
+    <script>
+        
+        var num= Array();
+        var sum=0;
+        var sq= Array();
+        var sq1=0;
+        function get()
+        {
+           
+              num[0]= document.getElementById("input1").value;
+              num[1]=document.getElementById("input2").value;
+              num[2]= document.getElementById("input3").value;
+              num[3]=document.getElementById("input4").value;
+              num[4]=document.getElementById("input5").value;
+             document.getElementById("out").innerHTML="Array[ "+num[0]+"," +num[1]+","+num[2]+","+num[3]+","+num[4]+" ]";
+            for(var i=0; i<num.length; i++)
+            {
+            
+                sq1=num[i]*num[i];
+
+                sum=sum+sq1;
+                sq[i]=sq1;
+                sq1=0;
+            }
+            
+            document.getElementById("out2").innerHTML="Sum of Squares of Array ="+sum;
+            document.getElementById("out1").innerHTML="Squares of Array[ "+sq[0]+"," +sq[1]+","+sq[2]+","+sq[3]+","+sq[4]+" ]";
+            
+        }
+        function clo()
+        {
+            window.close("index4.html");
+        }
+
+    </script>
+
+</body>
+</html>

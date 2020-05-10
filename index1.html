@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q1</title>
+</head>
+<body style="background-color:  rgb(172, 170, 170)";>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-2 col-md-6">
+                <div>
+                   
+                <form style="margin-top: 45px;">
+                       
+                     <label id="label1" > Enter 5 numbers to check whether the 1st number is Prime</label> <br>
+                     <input type="number" id="input1" placeholder= "enter 1st number" style="background-color: rgb(172, 170, 170);"><br>
+                     <input type="number" id="input2" placeholder="enter 2nd number" style="background-color: rgb(172, 170, 170);  "><br>
+                     <input type="number" id="input3" placeholder="enter 3rd number" style="background-color: rgb(172, 170, 170);  "><br>
+                     <input type="number" id="input4" placeholder="enter 4th number" style="background-color: rgb(172, 170, 170);  "><br>
+                     <input type="number" id="input5" placeholder="enter 5th number" style="background-color: rgb(172, 170, 170); "><br><br>
+                     
+                     <div>
+                        <button type="button" onclick="get()" style="background-color: rgb(172, 170, 170);"  >Enter</button>
+                        <button type="submit" onclick="clo()" style="background-color: rgb(172, 170, 170);">goback</button>
+                    </div> 
+                     <div>
+                         <P id="out"></P>
+                         <p id="out1"></p>
+                     </div>
+                     
+                </form>
+                </div> 
+            </div>
+        </div>
+    </div>
+    <script>
+        
+        var num= Array();
+        var num=pa
+        function get(){
+              num[0]= document.getElementById("input1").value;
+              num[1]=document.getElementById("input2").value;
+              num[2]= document.getElementById("input3").value;
+              num[3]=document.getElementById("input4").value;
+              num[4]=document.getElementById("input5").value;
+
+             document.getElementById("out").innerHTML="Array[ "+num[0]+"," +num[1]+","+num[2]+","+num[3]+","+num[4]+" ]";
+          
+            if(num[0]==1)  {
+               
+                                document.getElementById("out").innerHTML="Array[ "+num[0]+","+num[1]+","+num[2]+","+num[3]+","+num[4]+" ]";
+                              
+                                document.getElementById("out1").innerHTML="first element "+num[0]+" in the array is a PRIME Number";   
+                            }
+            else if (num[0]==2)
+                            {
+                                document.getElementById("out").innerHTML="Array[ " +num[0]+","+num[1]+","+num[2]+","+num[3]+","+num[4]+" ]";
+                               
+                                document.getElementById("out1").innerHTML="first element "+num[0]+" in the array is a PRIME Number"; 
+                            }
+            else if (num[0]>2)
+                            {
+                                for (var i=2; i<num[0]; i++)
+                                    {
+                                        if(num[0]%i !=0)
+                                            {var x=1;}
+                                        else
+                                            {break; }    
+                                    }
+                                    if (x==1)
+                                        {
+                                            document.getElementById("out").innerHTML="Array[ " +num[0]+","+num[1]+","+num[2]+","+num[3]+","+num[4]+" ]";
+                                              
+                                            document.getElementById("out1").innerHTML="first element "+num[0]+" in the array is a PRIME Number";   
+                                        }
+                                    else
+                                        {
+                                            document.getElementById("out").innerHTML="Array[ "+num[0]+","+num[1]+","+num[2]+","+num[3]+","+num[4]+" ]";
+                                              
+                                            document.getElementById("out1").innerHTML="first element "+num[0]+" in the array is  Not a PRIME Number"; 
+                                             
+                                        }    
+                            }   
+            
+        }
+        function clo()
+        {
+            window.close("index1.html");
+        }
+    </script>
+</body>
+</html>

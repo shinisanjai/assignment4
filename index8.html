@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q8</title>
+</head>
+<body style="background-color:rgb(172, 170, 170);">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-2 col-md-6">
+                <div>
+                
+                <table id="table">
+                       
+                     <label id="label1" > Alphabetic Order Array </label><br><br>
+                     <div> 
+                        <button type="button" onclick="get();" style="background-color: rgb(172, 170, 170);" >Try</button>
+                        <button type="submit" onclick="clo();" style="background-color: rgb(172, 170, 170);" >Goback</button>
+                    </div> 
+                     
+                     <div>
+                         <p id="output"></p>
+                         <P id="out"></P>
+                     </div>
+                     
+                    </table>
+                </div> 
+            </div>
+        </div>
+    </div>
+    <script>
+        
+        var num= Array();
+        function get(){
+           for (i=0; i<=4; i++)
+           {
+            num[i] = prompt("Enter  "+i+ "  Word");
+           }
+           document.getElementById("output").innerHTML="Entered array -->[ "+ num[0]+","+ num[1]+","+num[2]+","+num[3]+","+num[4] +" ]";
+              document.getElementById("out").innerHTML="Alphabetic ordered Array-->[ "+ num.sort() +" ]";
+           
+        }
+
+        function clo(){
+            
+            window.close("index8.html");    }
+    </script>
+    
+</body>
+</html>
